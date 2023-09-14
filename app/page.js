@@ -1,3 +1,5 @@
+'use client'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../components/navbar'
 import Image from 'next/image'
 import poster from '@/assets/poster.svg'
@@ -5,13 +7,18 @@ import { AiFillPlayCircle } from 'react-icons/ai'
 import Movies from './movies/Movies'
 import Footer from '@/components/footer'
 
+
+
+// const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
+// const BASE_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+
 export default function Home() {
   return (
-
-    <main className="flex relative max-w-[1440px] mx-auto bg-black flex-col items-center justify-between ">
+    <main className="flex relative mx-auto bg-black flex-col items-center justify-between ">
       <Image src={poster} alt='Hero Background' width={500} height={1000} className=' w-full h-[600px] object-cover absolute z-10 ' />
       <NavBar />
       <section className=' w-full object-cover z-10 relative h-[600px] justify-center items-center  grid grid-cols-2 px-24  '>
+
         <div className=' max-w-[404px] flex flex-col gap-4 '>
           <h1 className=' text-5xl leading-[56px] font-bold text-white  '>John Wick 3 : Parabellum</h1>
           <p className=' text-sm font-medium text-white ' >John Wick is on the run after killing a member of the international assassins &appos; guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
@@ -36,10 +43,7 @@ export default function Home() {
       {/* featured movie  */}
       <Movies />
 
-      {/* new arrivals  */}
 
-
-      {/* footer  */}
       <Footer />
 
     </main>

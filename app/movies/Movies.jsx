@@ -1,9 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
-import { AiOutlineArrowRight } from 'react-icons/ai'
 import MovieCard from '@/components/MovieCard'
+import getMovies from '@/lib/get-movies'
 
-const Movies = () => {
+const Movies = async () => {
+  const moviesData = getMovies();
+  const { results: movies } = await moviesData;
+
+  
   return (
     <section className=' pt-[70px] px-24 bg-white w-full text-black '>
       <div className=' flex justify-between items-center mb-11 '>
@@ -14,10 +18,12 @@ const Movies = () => {
           </svg></span> </p>
       </div>
       <div className=' grid grid-cols-4 gap-20 '>
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+       
+        {
+          movies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))  
+       }
 
       </div>
 
