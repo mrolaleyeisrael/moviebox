@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import { DM_Sans } from "next/font/google";
 import NavBar from '../components/navbar'
 import Image from 'next/image'
 import poster from '@/assets/poster.svg'
@@ -7,10 +8,6 @@ import { AiFillPlayCircle } from 'react-icons/ai'
 import Movies from './movies/Movies'
 import Footer from '@/components/footer'
 
-
-
-// const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
-// const BASE_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
 export default function Home() {
   return (
@@ -34,7 +31,7 @@ export default function Home() {
         <ul className=' flex flex-col text-xs  text-[#9CA3AF] font-bold absolute right-6 gap-[10px] '>
           <li className=' flex items-center gap-2 justify-end ' >1</li>
           <li className=' flex items-center gap-2 justify-end ' >2</li>
-          <li className=' flex items-center gap-2 justify-end ' > <p className=' h-1 w-5 bg-white  rounded-full ' ></p> 3</li>
+          <li className=' flex items-center gap-2 justify-end ' ><p className=' h-1 w-5 mr-1 bg-white  rounded-full' ></p>3</li>
           <li className=' flex items-center gap-2 justify-end ' >4</li>
           <li className=' flex items-center gap-2 justify-end ' >5</li>
         </ul>
