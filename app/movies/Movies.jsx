@@ -26,7 +26,7 @@ const Movies = async () => {
       <NavBar />
       <section className=' w-full object-cover z-10 relative h-[600px] justify-center items-center  grid grid-cols-2 px-24  '>
 
-        <div className=' max-w-[404px] flex flex-col gap-4 '>
+        <div className=' max-w-[604px] flex flex-col gap-4 p-4 rounded-xl bg-black/20 '>
           <h1 className=' text-5xl leading-[56px] font-bold text-white  '>
             {bannerMovie?.title || bannerMovie?.name || bannerMovie?.original_name}
           </h1>
