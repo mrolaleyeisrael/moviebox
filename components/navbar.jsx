@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from './logo'
-import Link from 'next/link'
 import SearchComponent from './search'
 import AuthComponent from './auth'
 

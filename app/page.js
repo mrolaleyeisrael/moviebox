@@ -1,4 +1,3 @@
-import { AiFillPlayCircle } from 'react-icons/ai'
 import Movies from './movies/Movies'
 import Footer from '@/components/footer'
 import React from 'react'

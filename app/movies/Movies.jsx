@@ -2,7 +2,6 @@ import React from 'react'
 import MovieCard from '@/components/MovieCard'
 import getMovies from '@/lib/get-movies'
 import Image from 'next/image'
-import poster from '@/assets/poster.svg'
 import Link from 'next/link'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import NavBar from '@/components/navbar'
@@ -38,7 +37,7 @@ const Movies = async () => {
             <span>
               <AiFillPlayCircle className=' text-white h-5 w-5 ' />
             </span>
-            <Link className=' text-white text-sm font-bold'  href={`/movies/${bannerMovie?.id}`} >Play Trailer</Link>
+            <Link className=' text-white text-sm font-bold' href={`/movies/${bannerMovie?.id}`} >Play Trailer</Link>
           </button>
 
         </div>
