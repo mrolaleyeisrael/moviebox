@@ -5,7 +5,8 @@ import Image from 'next/image'
 import poster from '@/assets/poster.svg'
 import Link from 'next/link'
 import { AiFillPlayCircle } from 'react-icons/ai'
-import NavBar from '@/components/NavBar'
+import NavBar from '@/components/navbar'
+
 const Movies = async () => {
   const moviesData = getMovies();
   const { results: movies } = await moviesData;
