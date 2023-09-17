@@ -38,7 +38,7 @@ const MainContent = ({ movie, credits, similar, trailer }) => {
 
   return (
     <div className=' max-w-5xl mx-auto text-black pt-10  pb-32 ' >
-    
+
 
       {/* trailer video  */}
       <VideoPlayer trailer={trailer} />
@@ -49,16 +49,15 @@ const MainContent = ({ movie, credits, similar, trailer }) => {
 
         <div className=' w-[75%] '>
           <div className=' flex gap-4 items-center'>
-            <div className=' flex gap-2 flex-wrap '>
-              <h1 data-testid="movie-title"
-                className='text-[25px] font-medium  '>{movie.original_title}</h1>
-            </div>
-            {/* •
-              <p>2022</p>
+            <div className=' flex gap-2 flex-wrap items-center '>
+              <h1 data-testid="movie-title" className='text-[25px] font-medium  '>{movie.original_title}</h1>
+              •
+              <p>{new Date(movie.release_date).toUTCString()}</p>
               •
               <p>PG-13</p>
               •
-              <p>2h 10m</p> */}
+              <p>{movie.runtime}</p>
+            </div>
 
             <div className=' flex gap-3'>
               {movie.genres.map((genre) => {
@@ -130,9 +129,13 @@ const MainContent = ({ movie, credits, similar, trailer }) => {
           <div className=' flex justify-end items-center gap-2  '>
             <span className=' text-[25px]' >⭐️</span>
             <div className=' flex items-center gap-1 font-medium '>
-              <p className=' text-[24px] text-[#E8E8E8] ' >4.5 </p>
-              <p className=' text-[#666] text-[20px] '> | 350k</p>
+              <p className=' text-[24px] text-[#E8E8E8] ' >{movie.vote_average.toFixed(1)}</p>
+              <p className=' text-[#666] text-[20px] '> | {movie.vote_count} votes</p>
             </div>
+          </div>
+
+          <div>
+
           </div>
         </div>
       </div>
